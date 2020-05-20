@@ -34,6 +34,7 @@ class Menu extends Component {
   }
 
   render() {
+      //Display all dishes
       const menu = this.props.dishes.map((dish) => {
           return (
             <div  className="col-12 col-md-5 m-1">
@@ -49,6 +50,7 @@ class Menu extends Component {
       });
 
       return (
+          //Display the selected dish
           <div className="container">
               <div className="row">
                   {menu}
