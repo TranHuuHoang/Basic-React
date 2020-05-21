@@ -4,6 +4,14 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
 
 class DishDetail extends Component{
 
+    componentDidMount(){
+        console.log("DishDetail Component componentDidMount invoked!");
+    }
+
+    componentDidUpdate(){
+        console.log("DishDetail Component componentDidUpdate invoked!");
+    }
+
     renderDish(dish) {
         if(dish ==null)
             return (<div></div>);
@@ -46,6 +54,8 @@ class DishDetail extends Component{
     }
 
     render(){
+        console.log("DishDetail Component render invoked!");
+
         const dish = this.props.dish;
         if(dish==null)
             return (
