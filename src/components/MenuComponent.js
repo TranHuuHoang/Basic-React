@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay,
-    CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import DishDetail from './DishdetailComponent';
 
     function RenderMenuItem ({dish, onClick}) {
         return (
@@ -23,12 +23,13 @@ import { Card, CardImg, CardImgOverlay,
                 </div>
             );
         });
-
+        // console.log(props);
         return (
             <div className="container">
                 <div className="row">
                     {menu}
                 </div>
+                <DishDetail dish={props.dishes.filter((dish) => dish.id === props.selected)[0]} />
             </div>
         );
     }
